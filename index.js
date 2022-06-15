@@ -22,7 +22,7 @@ const hoje = new Date();
 let isTodayHoliday = false;
 let holidayPosition = 0;
 
-for (i = 0; i < holidays.length; i++) {
+for (let i = 0; i < holidays.length; i++) {
     if (holidays[i].date == hoje.toLocaleDateString()) {
         isTodayHoliday = true;
         holidayPosition = i;
@@ -48,5 +48,3 @@ app.get("/is-today-holiday", (req, res) => {
 
 // Configura o servidor para rodar na porta 5000
 app.listen(5000);
-
-//http://localhost:5000/hello
